@@ -38,7 +38,7 @@ module.exports = {
                   {
                     loader: 'file-loader',
                     options: {
-                      name: 'images/[name].[ext]'
+                      name: 'assets/images/[name].[ext]'
                     }
                   },
                   {
@@ -56,7 +56,7 @@ module.exports = {
                   test: /\.(woff(2)?|ttf|eot|svg|woff|otf)(\?v=\d+\.\d+\.\d+)?$/,
                   loader: 'file-loader',
                  options: {
-                  name: 'fonts/[name].[ext]'
+                  name: 'assets/fonts/[name].[ext]'
                 }
             },
         ]
