@@ -145,14 +145,19 @@ swipeDetect(elem);
 let slid = document.querySelector('.slider-reviews');
 swipeDetect(slid);
 
-let knowMore = document.querySelector('#open');
-let close = document.querySelector('#close');
-knowMore.addEventListener('click', function() {
-    document.getElementById('visible').style.display = 'none';
-    document.getElementById('invisible').style.display = 'block';
-});
-close.addEventListener('click',function() {
-    document.getElementById('invisible').style.display = 'none';
-    document.getElementById('visible').style.display = 'block';
-});
-
+function openClose(firstSelector, secondSelector, thirdSelector, fourSelector){
+    document.getElementById(firstSelector).addEventListener('click', function() {
+        document.querySelector(secondSelector).style.display = 'none';
+        document.querySelector(thirdSelector).style.display = 'block';
+    });
+    document.getElementById(fourSelector).addEventListener('click', function() {
+        document.querySelector(secondSelector).style.display = 'block';
+        document.querySelector(thirdSelector).style.display = 'none';
+    });
+}
+openClose('open_first','.first-part__of-design','.first_more','close_first');
+openClose('open_second','.second-part__of-design','.second_more','close_second');
+openClose('open_third','.third-part__of-design','.third_more','close_third');
+openClose('open_four','.four-part__of-design','.four_more','close_four');
+openClose('open_five','.five-part__of-design','.five_more','close_five');
+openClose('open_six','.six-part__of-design','.six_more','close_six');

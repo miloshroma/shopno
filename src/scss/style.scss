@@ -513,6 +513,12 @@ a{
     background: #71f5ea;
     display: none;
 }
+.visible{
+    display: block;
+}
+.invisible{
+    display: none;
+}
 .click__know-more .header__of-design{
     letter-spacing: 1.4px;
     margin-top: 57px;
@@ -525,13 +531,16 @@ a{
     line-height: 1.75;
     letter-spacing: 0.4px;
 }
-.click__know-more .know_more{
-    margin-top: 58px;
-    margin-left: 46px;
+.click__know-more .closeDis{
+    margin-top: 40px;
+    margin-left: 58px;
     font-size: 27px;
-    color: rgba(0, 0, 0, 0.749);
+    color: rgba(0,0,0,0.749);
+    background: inherit;
+    border: none;
+    cursor: pointer;
 }
-.click__know-more .know_more::after{
+.click__know-more .closeDis::after{
     font-family: 'icomoon';
     content: "\f00d";
 }
@@ -1269,6 +1278,7 @@ a{
     .form__content {
         max-width: 830px;
         width: 100%;
+        padding: 0 30px;
     }
     .form__box {
         max-width: 668px;
@@ -1292,5 +1302,26 @@ a{
     }
     .social_networks{
         padding-bottom: 30px;
+    }
+}
+@media(max-width:1190px){
+    .click__know-more .closeDis{
+        padding-top: 5px;
+        margin-top:0 !important;
+    }
+}
+@media(max-width:398px){
+    .feature__header{
+        line-height: 1.1;
+    }
+}
+@media(max-width:680px){
+    .hello__shopno, .contact__text{
+       font-size: 20px;
+    }
+}
+@media(max-width:480px){
+    .contact__text{
+        line-height: 1;
     }
 }
